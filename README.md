@@ -19,9 +19,15 @@ En este laboratorio se configuró el entorno de desarrollo para Python.
 poetry install
 poetry add --group dev black isort ruff pre-commit
 pre-commit install
+
 ## Módulo 2 - Fundamentos
 Script que:
 - Lee archivo JSON
 - Filtra mayores de edad
 - Cuenta registros activos
 - Maneja errores de archivo y formato
+
+## Módulo 3 - Programación Pythonic
+- Uso de funciones con parámetros y retorno
+- Generadores con yield para procesamiento por lotes
+- Implementación de decorador para reintentos con manejo de errores
