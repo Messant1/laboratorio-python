@@ -31,3 +31,9 @@ Script que:
 - Uso de funciones con parámetros y retorno
 - Generadores con yield para procesamiento por lotes
 - Implementación de decorador para reintentos con manejo de errores
+
+## Módulo 4 - Validación con Pydantic
+Pydantic install
+El modelo valida los datos de entrada.  
+Ejemplo de error:
+Si edad = -5 → lanza error de validación.
