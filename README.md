@@ -1,10 +1,9 @@
 # laboratorio-python
 Repositorio para seguimiento al curso Pyhton - Axity y sus laboratorios
+
 ## Módulo 1 - Entorno y herramientas
-
 En este laboratorio se configuró el entorno de desarrollo para Python.
-
-### Actividades realizadas
+## Actividades realizadas
 - Instalación de Python 3.14
 - Configuración de entorno virtual con Poetry
 - Configuración de Visual Studio Code como IDE
@@ -14,11 +13,10 @@ En este laboratorio se configuró el entorno de desarrollo para Python.
   - ruff (análisis estático)
 - Configuración de pre-commit para validación automática antes de commits
 
-### Comandos utilizados
-```bash
-poetry install
-poetry add --group dev black isort ruff pre-commit
-pre-commit install
+## Comandos utilizados
+- poetry install
+- poetry add --group dev black isort ruff pre-commit
+- pre-commit install
 
 ## Módulo 2 - Fundamentos
 Script que:
@@ -33,7 +31,19 @@ Script que:
 - Implementación de decorador para reintentos con manejo de errores
 
 ## Módulo 4 - Validación con Pydantic
-Pydantic install
-El modelo valida los datos de entrada.  
-Ejemplo de error:
-Si edad = -5 → lanza error de validación.
+- Pydantic install
+- El modelo valida los datos de entrada.  
+- Ejemplo de error: Si edad = -5 → lanza error de validación.
+
+## Módulo 5 - Tipado y calidad de código
+Se implementó tipado estático en funciones utilizando typing:
+- List, Dict
+- Optional
+- Union
+- TypedDict
+Se integraron herramientas de calidad:
+- Ruff (linting)
+- Black (formateo)
+- isort (orden de imports)
+- pre-commit (automatización)
+Esto permite detectar errores antes de ejecutar el código y mantener estándares profesionales.
