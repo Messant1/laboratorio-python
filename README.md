@@ -47,3 +47,17 @@ Se integraron herramientas de calidad:
 - isort (orden de imports)
 - pre-commit (automatización)
 Esto permite detectar errores antes de ejecutar el código y mantener estándares profesionales.
+
+# Módulo 6: Librería estándar y E/S
+## Objetivo
+Procesar un archivo CSV, calcular métricas por cliente y exportar el resultado a JSON utilizando herramientas de la librería estándar.
+
+## Funcionalidades
+- Lectura de archivos con pathlib
+- Parseo de CSV
+- Manejo de errores
+- Logging del proceso
+- Exportación a JSON
+
+## Ejecución
+poetry run python src/laboratorio_python/modulo6_libreria.py

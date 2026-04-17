@@ -11,7 +11,7 @@ logging.basicConfig(
 )
 
 
-def leer_csv(path: Path) -> list[dict]:
+def leer_csv(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         logging.error(f"El archivo no existe: {path}")
         raise FileNotFoundError(f"No se encontró el archivo: {path}")
@@ -37,7 +37,7 @@ def procesar_datos(rows: list[dict]) -> dict:
     return dict(totales)
 
 
-def guardar_json(data: dict, output_path: Path) -> None:
+def guardar_json(data: dict[str, float], output_path: Path) -> None:
     output_path.write_text(
         json.dumps(data, indent=2, ensure_ascii=False),
         encoding="utf-8",
