@@ -51,13 +51,17 @@ Esto permite detectar errores antes de ejecutar el código y mantener estándare
 # Módulo 6: Librería estándar y E/S
 ## Objetivo
 Procesar un archivo CSV, calcular métricas por cliente y exportar el resultado a JSON utilizando herramientas de la librería estándar.
-
 ## Funcionalidades
 - Lectura de archivos con pathlib
 - Parseo de CSV
 - Manejo de errores
 - Logging del proceso
 - Exportación a JSON
-
 ## Ejecución
 poetry run python src/laboratorio_python/modulo6_libreria.py
+
+# Módulo 7: HTTP y consumo de APIs
+## Objetivo
+Consumir una API, manejar errores, aplicar reintentos y guardar la respuesta en un archivo JSON.
+## Ejecución
+poetry run python src/laboratorio_python/modulo7_http.py
