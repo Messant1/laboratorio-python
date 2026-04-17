@@ -21,7 +21,7 @@ def leer_csv(path: Path) -> list[dict[str, str]]:
         return list(reader)
 
 
-def procesar_datos(rows: list[dict]) -> dict:
+def procesar_datos(rows: list[dict[str, str]]) -> dict[str, float]:
     totales = defaultdict(float)
 
     for row in rows:
@@ -38,10 +38,19 @@ def procesar_datos(rows: list[dict]) -> dict:
 
 
 def guardar_json(data: dict[str, float], output_path: Path) -> None:
+    # 🔥 mejora pro: asegura que exista la carpeta
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
     output_path.write_text(
         json.dumps(data, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
+
+
+def run_pipeline(input_path: Path, output_path: Path) -> None:
+    rows = leer_csv(input_path)
+    resultado = procesar_datos(rows)
+    guardar_json(resultado, output_path)
 
 
 def main() -> None:
@@ -51,14 +60,13 @@ def main() -> None:
     logging.info("Iniciando proceso")
 
     try:
-        rows = leer_csv(input_path)
-        resultado = procesar_datos(rows)
-        guardar_json(resultado, output_path)
+        # ✅ AQUÍ está el cambio importante
+        run_pipeline(input_path, output_path)
 
         logging.info("Proceso completado correctamente")
 
-    except Exception as e:
-        logging.error(f"Error en ejecución: {e}")
+    except Exception:
+        logging.exception("Error en ejecución")
 
 
 if __name__ == "__main__":
